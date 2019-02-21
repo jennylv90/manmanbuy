@@ -1,0 +1,42 @@
+@import 'lvbase.less';
+// 主体样式
+
+#main {
+  position: relative;
+  flex: 1;
+  // overflow: auto;
+}
+#product {
+  li  {
+   a {
+    display: flex;
+    img {
+        // width: 1rem;
+        height: 1rem;
+     }
+     .title {
+       flex: 1;
+      .price {
+       color: @main-color;
+      }
+     }
+    
+   }
+  }
+}
+
+.mui-table-view .mui-media, .mui-table-view .mui-media-body{
+  margin-left: 0.1rem;
+}
+.mui-table-view-cell>a:not(.mui-btn){
+  white-space: normal;
+  text-overflow:none;
+}
+.des {
+  margin-top: 0.4rem;
+  line-height: 0.14rem;
+  font-size: 0.12rem;
+  .comment {
+    float: right;
+  }
+}

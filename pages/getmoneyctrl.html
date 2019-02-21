@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 完整视口 -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>省钱控</title>
+    <!-- 引入第三方Mui的css -->
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <!-- 引入字体图标库 -->
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.min.css">
+    <!-- 引入自身的css -->
+    <link rel="stylesheet/less" href="../less/lvbase.less">
+    <link rel="stylesheet/less" href="../less/getmoneyctrl.less">
+
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div id="header">
+        <a href="../index.html" class="left fa fa-chevron-left"></a>
+        <h4 class="center">省钱控-最新优惠</h4>
+        <a href="#" class="right"><img src="../images/header_app.png" alt=""></a>
+
+
+    </div>
+
+    <!-- 主体部分 -->
+    <div id="main">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!--这里放置真实显示的DOM内容-->
+                <div id="product">
+                    <ul class="mui-table-view">
+                        <li class="mui-table-view-cell mui-media">
+                            <a href="javascript:;">
+                                <img class="mui-media-object mui-pull-left" src="http://img10.360buyimg.com/n1/g13/M08/03/19/rBEhVFHUCF0IAAAAAAE6WA-oszMAAAvVQFF8CgAATpw626.jpg"
+                                    alt="">
+                                <div class="mui-media-body">
+                                    移动端凑单品：海天 鲜味 生抽 <p class="number">1.28L <span class="price">10.9元</span></p>
+                                    <p class='mui-ellipsis des'>
+                                        <span>京东商城&nbsp;|</span><span>&nbsp;10-25 14:10</span>
+                                        <i class="fa fa-commenting-o comment">1</i>
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                       
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 底部 -->
+    <div id="footer">
+        <div class="mui-row footer-title border-bottom border-top">
+            <div class="mui-col-xs-4 border-right">
+                登录
+            </div>
+            <div class="mui-col-xs-4 border-right">
+                注册
+            </div>
+            <div class="mui-col-xs-4 footer-up-top">
+                <i class="fa fa-arrow-circle-up"></i>
+                返回顶部
+            </div>
+        </div>
+        <div class="footer-content">
+            <p class="footer-content-name"><span>手机APP下载</span> 慢慢买手机版 -- 掌上比价平台</p>
+            <p class="footer-content-addres">m.manmanbuy.com </p>
+        </div>
+    </div>
+
+   <!-- 创建模板 -->
+   <script  id="getmoneyctrlTpl" type="text/html">
+   {{each result value}}
+   <li class="mui-table-view-cell mui-media" data-id={{value.productId}}>
+    <a href="javascript:;">
+        {{@value.productImgSm}}
+        <div class="mui-media-body title">
+            {{value.productName}}  <span class="price">{{value.productPinkage}}</span>
+            <p class='mui-ellipsis des'>
+                <span>{{value.productFrom}}&nbsp;|</span><span>&nbsp;{{value.productTime}}</span>
+                <!-- <i class="fa fa-commenting-o comment">{{value.productComCount.replace('有','').replace('人评论','')}}</i> -->
+                <span class="mui-pull-right"><i class="fa fa-commenting-o">{{value.productComCount.replace('有','').replace('人评论','')}}</i></span>
+            </p>
+        </div>
+    </a>
+</li>
+
+   {{/each}}
+   </script>
+
+
+  
+    <!-- 导入第三方Mui的js -->
+    <script src="../lib/mui/js/mui.min.js"></script>
+    <!-- 引入jQuery -->
+    <script src="../lib/jQuery/jquery-1.12.4.min.js"></script>
+    <script src="../lib/less/less.js"></script>
+    <!-- 引入zepto -->
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <!-- 引入artTemplate的js 创建模板 渲染数据 -->
+    <script src="../lib/artTemplate/template-web.js"></script>
+    <!-- 引入自身的js -->
+    <script src="../js/base.js"></script>
+    <script src="../js/getmoneyctrl.js"></script>
+</body>
+
+</html>

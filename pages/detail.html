@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 完整视口 -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>详情页面</title>
+    <!-- 引入第三方Mui的css -->
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <!-- 引入字体图标库 -->
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.min.css">
+    <!-- 引入自身的css -->
+    <link rel="stylesheet/less" href="../less/lvbase.less">
+    <link rel="stylesheet/less" href="../less/detail.less">
+
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div id="header">
+        <a href="getmoneyctrl.html" class="left fa fa-chevron-left"></a>
+        <h4 class="center">国内折扣</h4>
+        <a href="#" class="right"><img src="../images/header_app.png" alt=""></a>
+
+
+    </div>
+
+    <!-- 主体部分 -->
+    <div id="main">
+
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!--这里放置真实显示的DOM内容-->
+             <div class="box">
+                    <p id="title">移动端单品凑单</p>
+                    <p><span>京东商城</span><span>10-25 14:10</span><span>小编烟火/慢慢买</span></p>
+                    <div class="smallpic">
+                        <p class="content"></p>
+                        <img src="" alt="">
+                    </div>
+                    <img src="" alt="">
+                    <button class="buy">前往购买</button>
+                    <div class="eq">
+                        <img src="../images/mmbweixin2.png" alt="">
+                    </div>
+                    <!-- <p>发表评论</p> -->
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <!-- <p>最新评论</p> -->
+                    <div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+             </div>
+               
+        </div>
+
+
+    </div>
+
+    <!-- 底部 -->
+    <div id="footer">
+        <div class="mui-row footer-title border-bottom border-top">
+            <div class="mui-col-xs-4 border-right">
+                登录
+            </div>
+            <div class="mui-col-xs-4 border-right">
+                注册
+            </div>
+            <div class="mui-col-xs-4 footer-up-top">
+                <i class="fa fa-arrow-circle-up"></i>
+                返回顶部
+            </div>
+        </div>
+        <div class="footer-content">
+            <p class="footer-content-name"><span>手机APP下载</span> 慢慢买手机版 -- 掌上比价平台</p>
+            <p class="footer-content-addres">m.manmanbuy.com </p>
+        </div>
+    </div>
+
+    <!-- 创建模板 -->
+    <script id="detailTpl" type="text/html">
+        {{each result value index}}
+<p id="title">{{value.productName}}</p>
+<p class="address"><span>{{value.productFrom}}</span><span>{{value.productTime}}</span><span>{{value.productTips}}</span></p>
+<div class="description">
+    <p class="content">{{value.productInfo2}}</p>
+<div class="smallpic" >
+    {{@value.productImgSm}}
+</div>
+</div>
+<div class="bigpic">
+    {{@value.productImg2}}
+</div>
+<a href="#" class="buy">前往购买</a>
+<div class="eq">
+    <img src="../images/mmbweixin2.png" alt="">
+</div>
+
+<section id="comment">
+    <!-- {{@value.productComment}} -->
+
+    <!-- "<div class="cu-content-pl ui-border-t">
+        <div class="tit">发表评论</div>
+        <div class="reply">
+          <div class="form">
+          <textarea name="ctl00$ContentBody$txt_nr" id="ctl00_ContentBody_txt_nr" rows="3"></textarea>
+                              <input name="ctl00$ContentBody$lbl_fbr" id="ctl00_ContentBody_lbl_fbr" value="手机端网友14***154" type="hidden">
+                              <input name="ctl00$ContentBody$hid_name" id="ctl00_ContentBody_hid_name" value="RIWA 雷瓦 T5 2档家用大功率电吹风2200W" type="hidden">
+                              <div class="ctrl">
+                                <input name="ctl00$ContentBody$Button1" value="发表评论" id="ctl00_ContentBody_Button1" class="tjdp" type="submit">
+            </div>
+          </div>
+        </div>
+        <div class="tit" id="newcomment">最新评论</div>
+        <div class="list">
+          <ul>
+           <li class="ui-border-b"><div class="userimg"><img src="http://home.manmanbuy.com/upface/face/1474348687_162.jpg"></div><div class="con"><div class="name clearfix"><div class="username">Yan1994</div> <div class="time">2016/10/25 14:04:07</div></div><div class="content">吹风机已经便宜的没有底线了</div></div></li><li class="ui-border-b"><div class="userimg"><img src="http://bbs.manmanbuy.com/images/face/none.gif"></div><div class="con"><div class="name clearfix"><div class="username">marryme</div> <div class="time">2016/10/25 13:36:56</div></div><div class="content">家里有个1600W的，买了一个这个，冬天头发吹干会快一点</div></div></li><li class="ui-border-b"><div class="userimg"><img src="http://bbs.manmanbuy.com/images/face/none.gif"></div><div class="con"><div class="name clearfix"><div class="username">sxy66</div> <div class="time">2016/10/25 13:22:06</div></div><div class="content">不错的</div></div></li><li class="ui-border-b"><div class="userimg"><img src="http://bbs.manmanbuy.com/images/face/none.gif"></div><div class="con"><div class="name clearfix"><div class="username">Rosicky</div> <div class="time">2016/10/25 13:21:31</div></div><div class="content">雷瓦 康夫 飞科 都是大学神器<img src="http://img.t.sinajs.cn/t4/appstyle/expression/ext/normal/24/sweata_thumb.gif" width="22" height="22"></div></div></li><li class="ui-border-b"><div class="userimg"><img src="http://home.manmanbuy.com/upface/face/1465864400_162.jpg"></div><div class="con"><div class="name clearfix"><div class="username">h8ufh</div> <div class="time">2016/10/25 13:05:45</div></div><div class="content">19.9价格不多见啊  我记得29就推好价了  刚需可入</div></div></li>
+          </ul>
+        </div>
+      </div>" -->
+</section>
+{{/each}}
+</script>
+
+
+
+
+    <!-- 导入第三方Mui的js -->
+    <script src="../lib/mui/js/mui.min.js"></script>
+    <!-- 引入jQuery -->
+    <script src="../lib/jQuery/jquery-1.12.4.min.js"></script>
+    <script src="../lib/less/less.js"></script>
+    <!-- 引入zepto -->
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <!-- 引入artTemplate的js 创建模板 渲染数据 -->
+    <script src="../lib/artTemplate/template-web.js"></script>
+    <!-- 引入自身的js -->
+    <!-- <script src="../js/base.js"></script> -->
+    <script src="../js/detail.js"></script>
+</body>
+
+</html>

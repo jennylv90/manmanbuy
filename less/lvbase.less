@@ -1,0 +1,172 @@
+@main-color: #ff9000;
+@border-color: #cccccc;
+
+html {
+  font-size: 26.66667vw;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* 移动端按住元素取消高亮背景色 */
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #666666;
+}
+
+img {
+  border: none;
+  vertical-align: middle;
+}
+
+input,
+button,
+select {
+  border: none;
+  outline: none;
+}
+
+i {
+  font-style: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.clearfix::after {
+  content: '';
+  display: none;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.border-top {
+  border-top: 1px solid #cccccc;
+}
+
+.border-right {
+  border-right: 1px solid #cccccc;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #cccccc;
+}
+
+.border-left {
+  border-left: 1px solid #cccccc;
+}
+body {
+  font: 0.14rem/100% '微软雅黑', '宋体', '黑体';
+  background-color: #fff;
+  color: black;
+  display: flex;
+  //垂直方向主轴
+  flex-direction: column;
+  height: 100vh;
+}
+
+//   头部样式
+#header {
+  // z-index: 999;
+  background-color: orange;
+  height: 0.45rem;
+  display: flex;
+  padding: 0 0.05rem;
+  border-bottom: 1px solid @border-color;
+
+  .left {
+    width: .45rem;
+    text-align: center;
+    color: #fff;
+    font-size: 0.16rem;
+    margin-top: 0.17rem;
+  }
+
+  .center {
+    flex: 1;
+    text-align: center;
+    color: #fff;
+    line-height: 0.45rem;
+    //去掉mui中默认自带的margin
+    margin: 0;
+    font-weight: normal;
+  }
+
+  .right {
+    margin-top: 0.05rem;
+    width: 0.45rem;
+    display: block;
+    img {
+      width: 0.34rem;
+      height: 0.34rem;
+    }
+  }
+}
+
+
+
+// 底部
+#footer {
+ 
+  height: 1.1rem;
+  background-color: #232a34;
+  color: #ffffff;
+  // z-index: 999;
+
+  .footer-title {
+    height: 0.35rem;
+
+    div {
+      text-align: center;
+      line-height: 0.35rem;
+
+      .fa-arrow-circle-up {
+        font-size: 0.14rem;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .footer-content {
+    background-color: #232a34;
+    width: 100%;
+    // height: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    p {
+      font-size: 0.12rem;
+      margin-bottom: 0;
+      line-height: 0.2rem;
+    }
+
+    .footer-content-name {
+      color: #ccc;
+
+      span {
+        color: red;
+      }
+    }
+  }
+}

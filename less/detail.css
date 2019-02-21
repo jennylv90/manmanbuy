@@ -1,0 +1,194 @@
+html {
+  font-size: 26.66667vw;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* 移动端按住元素取消高亮背景色 */
+  -webkit-tap-highlight-color: transparent;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #666666;
+}
+img {
+  border: none;
+  vertical-align: middle;
+}
+input,
+button,
+select {
+  border: none;
+  outline: none;
+}
+i {
+  font-style: normal;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.clearfix::after {
+  content: '';
+  display: none;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  *zoom: 1;
+}
+.border-top {
+  border-top: 1px solid #cccccc;
+}
+.border-right {
+  border-right: 1px solid #cccccc;
+}
+.border-bottom {
+  border-bottom: 1px solid #cccccc;
+}
+.border-left {
+  border-left: 1px solid #cccccc;
+}
+body {
+  font: 0.14rem/100% '微软雅黑', '宋体', '黑体';
+  background-color: #fff;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+#header {
+  background-color: orange;
+  height: 0.45rem;
+  display: flex;
+  padding: 0 0.05rem;
+  border-bottom: 1px solid #cccccc;
+}
+#header .left {
+  width: .45rem;
+  text-align: center;
+  color: #fff;
+  font-size: 0.16rem;
+  margin-top: 0.17rem;
+}
+#header .center {
+  flex: 1;
+  text-align: center;
+  color: #fff;
+  line-height: 0.45rem;
+  margin: 0;
+  font-weight: normal;
+}
+#header .right {
+  margin-top: 0.05rem;
+  width: 0.45rem;
+  display: block;
+}
+#header .right img {
+  width: 0.34rem;
+  height: 0.34rem;
+}
+#footer {
+  height: 1.1rem;
+  background-color: #232a34;
+  color: #ffffff;
+}
+#footer .footer-title {
+  height: 0.35rem;
+}
+#footer .footer-title div {
+  text-align: center;
+  line-height: 0.35rem;
+}
+#footer .footer-title div .fa-arrow-circle-up {
+  font-size: 0.14rem;
+  color: #ffffff;
+}
+#footer .footer-content {
+  background-color: #232a34;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+#footer .footer-content p {
+  font-size: 0.12rem;
+  margin-bottom: 0;
+  line-height: 0.2rem;
+}
+#footer .footer-content .footer-content-name {
+  color: #ccc;
+}
+#footer .footer-content .footer-content-name span {
+  color: red;
+}
+body {
+  height: 100vh;
+}
+#main {
+  width: 100%;
+  position: relative;
+  flex: 1;
+}
+#main .box {
+  padding: 0.1rem;
+}
+#main #title {
+  font-size: 0.16rem;
+  font-weight: bold;
+}
+#main .address {
+  margin-top: 0.2rem;
+  font-size: 0.12rem;
+}
+#main .description {
+  display: flex;
+  margin-top: 0.2rem;
+}
+#main .description .content {
+  flex: 1;
+  font-size: 0.14rem;
+  line-height: 0.2rem;
+}
+#main .description .smallpic {
+  width: 30%;
+}
+#main .description .smallpic img {
+  width: 1rem;
+}
+#main .buy {
+  width: 100%;
+  background-color: #ff4e49;
+  height: .36rem;
+  line-height: .36rem;
+  display: block;
+  text-align: center;
+  border-radius: .05rem;
+}
+#main .eq img {
+  width: 100%;
+}
+#comment li {
+  list-style: none;
+  margin-bottom: .2rem;
+}
+.userimg {
+  float: left;
+  width: 0.6rem;
+  height: 0.6rem;
+  max-width: 0.6rem;
+  border-radius: 0.6rem;
+  overflow: hidden;
+  margin-right: .15rem;
+}
+.bigpic img {
+  width: 100%;
+}
